@@ -4,11 +4,8 @@ import get from 'lodash/get'
 import classes from './JsonDifferComponent.module.css';
 
 const JsonDifferComponent = ({object1, object2}) => {
-
     const diffResult = diff(object1, object2);
     const detailedDiffResult = detailedDiff(object1, object2);
-    console.log(JSON.stringify(diffResult));
-    console.log(JSON.stringify(detailedDiffResult));
 
     return <div className={classes.reactJsonDiffer__container}>
     {'{'}
@@ -27,7 +24,6 @@ const DifferProp = ({diffResult, detailedDiffResult, initialObjects, path}) => {
     return (<>{
         keys.map(
                 property => {
-                    
                     const currentPath = path == "" ? property : `${path}.${property}`;
                     const nextDiffResult = diffResult[property] || [] ;
                     const nextAdded = added[property] || [] ;
@@ -46,6 +42,7 @@ const DifferProp = ({diffResult, detailedDiffResult, initialObjects, path}) => {
                             originalObjectContentToDisplay = originalObjectContentToDisplay.length > 50 ? originalObjectContentToDisplay.slice(0, 50) + "..." : originalObjectContentToDisplay;
                             return <div><span className={classes.reactJsonDiffer__deleted}>{property}: {originalObjectContentToDisplay}</span>,</div>
                         }
+
                         if(classToUse == "added")
                         {
                             let newObjectContentToDisplay = JSON.stringify(diffResult[property]);
@@ -53,6 +50,7 @@ const DifferProp = ({diffResult, detailedDiffResult, initialObjects, path}) => {
 
                             return <div><span className={classes.reactJsonDiffer__added}>{property}: {newObjectContentToDisplay}</span>,</div>
                         }
+                        
                         if(classToUse == "updated")
                         {
                             let originalObjectContentToDisplay = JSON.stringify(get(object1, currentPath, ""));
