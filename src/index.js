@@ -1,1 +1,1 @@
-export { TestComponent } from './TestComponent';
+export { JsonDifferComponent } from './JsonDifferComponent';

@@ -1,0 +1,30 @@
+
+
+.reactJsonDiffer__deleted {
+    display:inline-block;
+    white-space: pre-wrap;
+    color: #b30000;
+    background: #fadad7;
+    border: 1px solid #f8a4a4;
+}
+
+.reactJsonDiffer__updated {
+}
+
+.reactJsonDiffer__added {
+    display:inline-block;
+    white-space: pre-wrap;
+    background: #eaf2c2;
+    color: #406619;
+    border: 1px solid #a3ce4c;
+}
+
+.reactJsonDiffer__container {
+    background-color: #eceef0;
+    font-size: 15px;
+    font-family: Menlo,Monaco,Consolas,Courier New,monospace;
+}
+
+.reactJsonDiffer__level {
+    margin-left: 2em;
+}
