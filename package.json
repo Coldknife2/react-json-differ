@@ -1,24 +1,26 @@
 {
   "name": "react-json-differ",
   "version": "1.0.0",
-  "description": "A simple react package to ",
-  "main": "index.js",
+  "description": "React equivalent of angular-object-diff",
+  "main": "dist/jsonDiffer.js",
   "workspaces": {
     "packages": [
       "components/*",
       "testing/*"
     ]
   },
+  "files": ["/dist"],
   "scripts": {
     "start": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
-  "author": "",
+  "author": "Coldknife2",
   "license": "ISC",
   "dependencies": {
     "@vitejs/plugin-react": "^1.3.2",
-    "diff": "^5.1.0",
+    "deep-object-diff": "^1.1.7",
+    "lodash": "^4.17.21",
     "react": "^18.1.0",
     "vite": "^2.9.12"
   },
