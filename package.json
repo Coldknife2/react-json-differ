@@ -1,6 +1,6 @@
 {
   "name": "react-json-differ",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React equivalent of angular-object-diff",
   "main": "dist/jsonDiffer.js",
   "workspaces": {
