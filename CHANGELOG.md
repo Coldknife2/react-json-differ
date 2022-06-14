@@ -1,3 +1,7 @@
+# 1.0.3
+
+Better support of undefined in adds
+
 # 1.0.2
 
 Link to github repo on the npm page

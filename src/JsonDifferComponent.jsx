@@ -45,7 +45,7 @@ const DifferProp = ({diffResult, detailedDiffResult, initialObjects, path}) => {
 
                         if(classToUse == "added")
                         {
-                            let newObjectContentToDisplay = JSON.stringify(diffResult[property]);
+                            let newObjectContentToDisplay = JSON.stringify(diffResult[property]) || "";
                             newObjectContentToDisplay = newObjectContentToDisplay.length > 50 ? newObjectContentToDisplay.slice(0, 50) + "..." : newObjectContentToDisplay;
 
                             return <div><span className={classes.reactJsonDiffer__added}>{property}: {newObjectContentToDisplay}</span>,</div>
@@ -56,7 +56,7 @@ const DifferProp = ({diffResult, detailedDiffResult, initialObjects, path}) => {
                             let originalObjectContentToDisplay = JSON.stringify(get(object1, currentPath, ""));
                             originalObjectContentToDisplay = originalObjectContentToDisplay.length > 50 ? originalObjectContentToDisplay.slice(0, 50) + "..." : originalObjectContentToDisplay;
 
-                            let newObjectContentToDisplay = JSON.stringify(diffResult[property]);
+                            let newObjectContentToDisplay = JSON.stringify(diffResult[property]) || "";
                             newObjectContentToDisplay = newObjectContentToDisplay.length > 50 ? newObjectContentToDisplay.slice(0, 50) + "..." : newObjectContentToDisplay;
 
                             return (<div className={classes.reactJsonDiffer__updated}>
