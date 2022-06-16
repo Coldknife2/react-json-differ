@@ -1,3 +1,6 @@
+# 1.0.5
+
+Output format changed to commonjs (cjs)
 # 1.0.4
 
 Build push failed
