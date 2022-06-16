@@ -8,7 +8,7 @@ module.exports = defineConfig({
       entry: path.resolve(__dirname, 'src/index.js'),
       name: 'jsonDiffer',
       fileName: (format) => 'jsonDiffer.js',
-      formats: ['es']
+      formats: ['cjs']
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
